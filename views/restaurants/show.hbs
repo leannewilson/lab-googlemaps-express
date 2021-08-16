@@ -1,4 +1,17 @@
-<h3 id="restaurantName" data-id="{{ restaurant.id}}">{{ restaurant.name}}</h3>
-<p>{{ restaurant.description}}</p>
+<h3 id="restaurantName" data-id="{{restaurant.id}}">{{restaurant.name}}</h3>
+<p>{{restaurant.description}}</p>
 <a href="/restaurants/{{restaurant._id}}/edit">Edit this restaurant</a>
 <a href="/restaurants">Go back to the list</a>
+
+<div>
+  <div id="map"></div>
+  <!--  Axios CDN  -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <!--  Google Maps Key  -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbBJPvYIaR5ozIx_0-uWiGeO9cK4IxHww"
+  >
+  </script>
+  <!--  Connect main.js  -->
+  <script type="text/javascript" src="/javascripts/main.js"></script>
+</div>

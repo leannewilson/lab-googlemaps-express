@@ -1,17 +1,25 @@
 <h1>{{title}}</h1>
 <div class="info">
-    <h3>List of all restaurants</h3>
-    <a href="/restaurants/new">Create new restaurant</a>
-    <ul>
-        {{#each restaurants}}
-        <li>
-            <a href="/restaurants/{{ this._id}}">{{ this.name}}</a>
-            |
-            <a href="/restaurants/{{ this._id}}/delete">Delete</a>
-        </li>
-        {{/each }}
-    </ul>
-    {{!-- add map here --}}
+  <h3>List of all restaurants</h3>
+  <a href="/restaurants/new">Create new restaurant</a>
+  <ul>
+    {{#each restaurants}}
+      <li>
+        <a href="/restaurants/{{this._id}}">{{this.name}}</a>
+        |
+        <a href="/restaurants/{{this._id}}/delete">Delete</a>
+      </li>
+    {{/each}}
+  </ul>
+  {{! add map here }}
+  <div id="map"></div>
+  <!--  Axios CDN  -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <!--  Google Maps Key  -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbBJPvYIaR5ozIx_0-uWiGeO9cK4IxHww"
+  >
+  </script>
+  <!--  Connect main.js  -->
+  <script type="text/javascript" src="/javascripts/main.js"></script>
 </div>
-{{!-- added your scripts here --}}
-  
